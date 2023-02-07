@@ -1,5 +1,5 @@
 /**
- * 阶乘
+ * 10的阶乘
  * */
 package ClassPractice;
 
