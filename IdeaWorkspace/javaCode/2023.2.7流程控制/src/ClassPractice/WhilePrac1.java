@@ -18,5 +18,6 @@ public class WhilePrac1 {
                 System.out.println(b);
             }
         }
+
     }
 }
