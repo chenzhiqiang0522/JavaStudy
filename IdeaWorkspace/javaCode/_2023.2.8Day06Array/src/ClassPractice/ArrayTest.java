@@ -17,5 +17,6 @@ public class ArrayTest {
         intArr1 = new int[3];
         shortArr1 = new short[3];
          longArr1 = new long[3];
+        System.out.println();
     }
 }
