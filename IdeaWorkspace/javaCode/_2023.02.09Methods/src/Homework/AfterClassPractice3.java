@@ -12,7 +12,7 @@ package Homework;
 /**
  * 
  */
-public class VarArgs {
+public class AfterClassPractice3 {
     public static void main(String[] args) {
         System.out.println("15、6、9的乘积为"+multiply(15,6,9));
     }
