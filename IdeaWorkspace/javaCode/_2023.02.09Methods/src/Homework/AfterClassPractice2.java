@@ -17,12 +17,11 @@ import java.util.Arrays;
 public class AfterClassPractice2 {
     public static void main(String[] args) {
         int[] arr = new int[]{1,5,9,6,5,2,4,3,6,8,2};
-        min(arr);
+        System.out.println(min(arr));
     }
 
-    public static int[] min(int[] arr){
+    public static int min(int[] arr){
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        return arr;
+        return arr[0];
     }
 }
