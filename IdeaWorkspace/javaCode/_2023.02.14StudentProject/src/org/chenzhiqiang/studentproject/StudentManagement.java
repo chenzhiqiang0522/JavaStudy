@@ -15,10 +15,9 @@ import java.util.Scanner;
  */
 public class StudentManagement {
     private static Scanner scanner = new Scanner(System.in);
-    private boolean identity = true;
     private static Admin[] administrator = new Admin[5];
     private static Student[] student = new Student[20];
-    public static int stuNum = 0;
+    public static int stuNum = 0;       // 学生总数
     public static boolean flag = false;
 
     public static void main(String[] args) {
@@ -127,45 +126,38 @@ public class StudentManagement {
         if (flag) {
             // 当前信息
             System.out.println("修改前信息如下:");
-            System.out.print("登录账号" + "\t");
-            System.out.print("姓名" + "\t" + "\t");
-            System.out.print("电话" + "\t" + "\t" + "\t");
-            System.out.print("性别" + "\t");
-            System.out.println("籍贯");
-            System.out.println("-----------------------------------------------");
-            System.out.print(student[i].getStuAccount() + "\t");
-            System.out.print(student[i].getStuName() + "\t");
-            System.out.print(student[i].getStuTel() + "\t");
-            System.out.print((student[i].isStuGender() ? "男生" : "女生") + "\t");
-            System.out.println(student[i].getStuAddress());
+            outPut(student[i]);
             System.out.println("-----------------------------------------------");
             // 修改信息
-            System.out.print("请输入要添加的姓名:");
+            System.out.print("请输入要修改的姓名:");
             String stuName = scanner.next();
             student[i].setStuName(stuName);
-            System.out.print("请输入要添加的性别:");
+            System.out.print("请输入要修改的性别:");
             boolean stuGender = scanner.nextBoolean();
             student[i].setStuGender(stuGender);
-            System.out.print("请输入要添加的电话:");
+            System.out.print("请输入要修改的电话:");
             String stuTel = scanner.next();
             student[i].setStuTel(stuTel);
-            System.out.print("请输入要添加的籍贯:");
+            System.out.print("请输入要修改的籍贯:");
             String stuAddress = scanner.next();
             student[i].setStuAddress(stuAddress);
             // 修改后的信息
             System.out.println("修改后信息如下:");
-            System.out.print("登录账号" + "\t");
-            System.out.print("姓名" + "\t" + "\t");
-            System.out.print("电话" + "\t" + "\t" + "\t");
-            System.out.print("性别" + "\t");
-            System.out.println("籍贯");
-            System.out.println("-----------------------------------------------");
-            System.out.print(student[i].getStuAccount() + "\t");
-            System.out.print(student[i].getStuName() + "\t");
-            System.out.print(student[i].getStuTel() + "\t");
-            System.out.print((student[i].isStuGender() ? "男生" : "女生") + "\t");
-            System.out.println(student[i].getStuAddress());
+            outPut(student[i]);
         }
+    }
+    public static void outPut(Student student){
+        System.out.print("登录账号" + "\t");
+        System.out.print("姓名" + "\t" + "\t");
+        System.out.print("电话" + "\t" + "\t" + "\t");
+        System.out.print("性别" + "\t");
+        System.out.println("籍贯");
+        System.out.println("-----------------------------------------------");
+        System.out.print(student.getStuAccount() + "\t");
+        System.out.print(student.getStuName() + "\t");
+        System.out.print(student.getStuTel() + "\t");
+        System.out.print((student.isStuGender() ? "男生" : "女生") + "\t");
+        System.out.println(student.getStuAddress());
     }
 
     private static void addStudent() {
