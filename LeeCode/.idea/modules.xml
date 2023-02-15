@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LeeCode.iml" filepath="$PROJECT_DIR$/LeeCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LongestCommonPrefix/LongestCommonPrefix.iml" filepath="$PROJECT_DIR$/LongestCommonPrefix/LongestCommonPrefix.iml" />
       <module fileurl="file://$PROJECT_DIR$/Palindrome/Palindrome.iml" filepath="$PROJECT_DIR$/Palindrome/Palindrome.iml" />
       <module fileurl="file://$PROJECT_DIR$/RomanNumber/RomanNumber.iml" filepath="$PROJECT_DIR$/RomanNumber/RomanNumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/SumOfTwoNumbers/SumOfTwoNumbers.iml" filepath="$PROJECT_DIR$/SumOfTwoNumbers/SumOfTwoNumbers.iml" />
