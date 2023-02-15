@@ -10,6 +10,9 @@ import java.util.Objects;
  * Date：2023/2/15
  * Filename：Model
  */
+/*
+    模特业务类
+ */
 public class Model {
     private String name;
     private double waistline;   // 腰围
@@ -17,7 +20,7 @@ public class Model {
     private double brestline;   // 胸围
 
     @Override
-    public String toString() {
+    public String toString() {      // 重写toString方法
         return "Model[" +
                 "name:'" + name  +
                 ", waistline:" + waistline +
@@ -27,7 +30,7 @@ public class Model {
     }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) {       // 重写equals方法
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Model model = (Model) o;

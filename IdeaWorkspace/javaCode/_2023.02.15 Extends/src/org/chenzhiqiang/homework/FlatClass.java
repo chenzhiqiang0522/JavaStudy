@@ -9,7 +9,7 @@ package org.chenzhiqiang.homework;
  * Filename：FlatClass
  */
 /*
-    平面
+    平面模特类
  */
 public class FlatClass extends Model {
     public FlatClass() {
