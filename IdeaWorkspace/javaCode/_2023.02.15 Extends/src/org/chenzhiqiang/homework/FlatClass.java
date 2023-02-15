@@ -12,6 +12,11 @@ package org.chenzhiqiang.homework;
     平面模特类
  */
 public class FlatClass extends Model {
+    @Override
+    public void changeClothes() {
+        System.out.println("以方式二更换衣服！！！！");
+    }
+
     public FlatClass() {
     }
 

@@ -39,6 +39,13 @@ public class Model {
                 Double.compare(model.brestline, brestline) == 0 &&
                 Objects.equals(name, model.name);
     }
+    public void walkThrough(){
+        System.out.println("走秀中！！！！！");
+    }
+
+    public void changeClothes(){
+        System.out.println("更换衣服！！！！");
+    }
 
     @Override
     public int hashCode() {

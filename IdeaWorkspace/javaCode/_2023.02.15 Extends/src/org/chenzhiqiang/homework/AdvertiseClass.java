@@ -12,6 +12,11 @@ package org.chenzhiqiang.homework;
     广告模特
  */
 public class AdvertiseClass extends Model{
+    @Override
+    public void changeClothes() {
+        System.out.println("以方式三更换衣服！！！！！");
+    }
+
     public AdvertiseClass() {
     }
 
