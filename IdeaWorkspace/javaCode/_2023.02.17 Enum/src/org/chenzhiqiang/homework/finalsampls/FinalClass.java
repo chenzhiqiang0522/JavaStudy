@@ -46,10 +46,10 @@ final class FinalClass1{
 //
 //}
 class SonClass extends FinalClass{
-    @Override
-    public void work() {
-
-    }
+//    @Override
+//    public void work() {
+//
+//    }
     @Override
     public void rest() {        // 重写非final修饰方法
         System.out.println("不想上班，只想休息");
