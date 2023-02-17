@@ -26,5 +26,6 @@ public class ComputerTest {
         System.out.println("--------------------------------------------------");
         Computer.HardDisk disk = new Computer.HardDisk();
         System.out.println(disk);
+
     }
 }
