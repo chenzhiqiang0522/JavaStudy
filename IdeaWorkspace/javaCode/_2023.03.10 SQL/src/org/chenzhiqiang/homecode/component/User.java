@@ -11,6 +11,7 @@ package org.chenzhiqiang.homecode.component;
 public class User {
     private String username;
     private String password;
+    private String useraccount;
 
     public String getUsername() {
         return username;
@@ -28,11 +29,20 @@ public class User {
         this.password = password;
     }
 
+    public String getUseraccount() {
+        return useraccount;
+    }
+
+    public void setUseraccount(String useraccount) {
+        this.useraccount = useraccount;
+    }
+
     public User() {
     }
 
-    public User(String username, String password) {
+    public User(String username, String password, String useraccount) {
         this.username = username;
         this.password = password;
+        this.useraccount = useraccount;
     }
 }

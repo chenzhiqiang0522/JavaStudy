@@ -31,13 +31,13 @@ public class LoginTest {
         try {
             connection = ConnectionUtils.databaseConn();
             System.out.println(connection);
-            System.out.print("登录用户名:");
+            System.out.print("登录用户账号:");
             String usernameInput = scanner.next();
             System.out.print("用户密码:");
             String password = scanner.next();
             
-            statement = connection.createStatement();
-            String sql = "select * from user1 where username=".concat("'").concat(usernameInput).concat("'").concat(";");
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            String sql = "select * from user1 where useraccount=".concat(usernameInput).concat(";");
             if (Objects.isNull(usernameInput))
                 System.out.println("用户名为空");
             if (Objects.isNull(password))
@@ -45,18 +45,18 @@ public class LoginTest {
             resultSet = statement.executeQuery(sql);
             User user = new User();
             System.out.println(resultSet.toString());
+            resultSet.last();
             int row = resultSet.getRow();
+            System.out.println(row);
             if (row>0? true:false){
-                while (resultSet.next()) {
-                    user.setPassword(resultSet.getString("password"));
-                }
+                resultSet.first();
+//                while (resultSet.next()) {
+//                    user.setPassword(resultSet.getString("password"));
+//                }
+                user.setPassword(resultSet.getString("password"));
                 if (!(user.getPassword().equals(password))){
                     System.out.println("密码错误");
                     throw new VertifyException("校验异常!!!");
-                }
-                if (!(user.getPassword().equals(password))){
-//                    throw new VertifyException("校验异常!!!");
-                    System.out.println("密码错误");
                 }
             }else {
                 System.out.println("该用户不存在！！！！！！");
